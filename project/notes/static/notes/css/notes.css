@@ -1,0 +1,16 @@
+/* Эффекты для кнопок */
+button.btn-success:hover {
+    background-color: #218838; /* Более темный зеленый */
+    color: white;
+    transform: scale(1.05); /* Увеличение при наведении */
+    transition: all 0.2s ease-in-out;
+}
+
+button.btn-outline-success:hover {
+    background-color: #28a745; /* Заполнение зеленым */
+    color: white;
+    transform: scale(1.05); /* Увеличение при наведении */
+    transition: all 0.2s ease-in-out;
+}
+
+

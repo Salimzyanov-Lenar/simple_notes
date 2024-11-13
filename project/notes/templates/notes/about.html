@@ -1,0 +1,90 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block extra_styles %}
+<link type="text/css" href="{% static 'notes/css/notes.css' %}" rel="stylesheet" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<style>
+    .about-container {
+        max-width: 800px;
+        margin: 50px auto;
+        text-align: center;
+        font-family: 'Arial', sans-serif;
+    }
+
+    h1 {
+        font-size: 2.5rem;
+        margin-bottom: 20px;
+        color: #333;
+        animation: fadeInDown 0.5s ease-out;
+    }
+
+    p {
+        font-size: 1.2rem;
+        line-height: 1.8;
+        color: #555;
+        animation: fadeIn 0.5s ease-in-out;
+    }
+
+    .highlight {
+        color: #28a745;
+        font-weight: bold;
+    }
+
+    @keyframes fadeInDown {
+        0% {
+            opacity: 0;
+            transform: translateY(-20px);
+        }
+        100% {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    @keyframes fadeIn {
+        0% {
+            opacity: 0;
+        }
+        100% {
+            opacity: 1;
+        }
+    }
+
+    .icon-container {
+        margin-top: 30px;
+        animation: bounceIn 0.5s ease-in-out;
+    }
+
+    @keyframes bounceIn {
+        0% {
+            opacity: 0;
+            transform: scale(0.3);
+        }
+        50% {
+            opacity: 1;
+            transform: scale(1.05);
+        }
+        100% {
+            transform: scale(1);
+        }
+    }
+
+    .icon-container i {
+        font-size: 3rem;
+        color: #28a745;
+    }
+</style>
+{% endblock %}
+
+{% block content %}
+<div class="about-container">
+    <h1>О TODO</h1>
+    <p>
+        Добро пожаловать! Это самое <span class="highlight">минималистичное TODO приложение</span>, что вы когда-либо видели.
+    </p>
+    <div class="icon-container">
+        <i class="fas fa-clipboard-list"></i>
+    </div>
+</div>
+{% endblock %}
